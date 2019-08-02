@@ -1,0 +1,9 @@
+<input type="text" #query list="comp">
+<button (click)="search(query.value)">Search</button><br><br>
+<div>
+  <span>Company Name:&nbsp;</span><span><b>{{query.value | uppercase}}</b></span><br>
+  <span>Price:&nbsp;</span><span><b>{{price}}</b></span>
+</div>
+<datalist id="comp">
+  <option *ngFor="let comp of comps" value="{{comp._comp}}">
+</datalist>
